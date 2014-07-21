@@ -1,4 +1,4 @@
-Robost music/audio recognition algorithm in C++
+Robust Music/Audio Recognition Algorithm in C++
 ===============================================
 
 TODO:
