@@ -1,27 +1,18 @@
-// iFlySelect.cpp : 定义 DLL 应用程序的导出函数。
-//
-
-#include "stdafx.h"
-#include "iFlySelect.h"
-#include "Hash.h"
+#include "hash.h"
 #include "fingerprint.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
+using namespace std;
 
 // 唯一的应用程序对象
 THash myhash;
 TExtractFeature fingerprint;
 
-CWinApp theApp;
-
-using namespace std;
-
 int Initialize(const char *szResPath){
 	myhash.File2Hash(szResPath);
-
 	myhash.ReBuildInit();
 	return 0;
 }
@@ -46,4 +37,21 @@ int ProcessSelelct(const char *szAudioPath, std::string &szResultString){
 
 int unInitialize(){
 	return 0;
+}
+
+int
+main( int argc, char **argv )
+{
+    std::string resultString;
+    if (argc != 2 )
+    {
+        printf("Wrong Usage, please use './recog filename'\n");
+        return 1;
+    }
+    Initialize("./database");
+    printf("Initialize done.\n");
+    /* printf("Audio path is :%s\n",argv[1]); */
+    ProcessSelelct(argv[1],resultString);
+    unInitialize();
+    return 0;
 }

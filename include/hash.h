@@ -18,14 +18,14 @@
 #define OverFlowThreshold 1<<28
 using namespace std;
 
-//Hash的key类型，用于iFluBuild
+//Hash的key类型，用于Build
 //(f1, f2_f1, t)
 struct HashKeyInfo{
 	size_t* start;
 	size_t length;
 	HashKeyInfo* next;	//指针用于扩容
 };
-//Hash的key类型，用于iFluSelect
+//Hash的key类型，用于Recog
 struct HashKeyTable{
 	size_t *start;
 	size_t length;
@@ -43,26 +43,26 @@ public:
 	HashKeyInfo *key_info;
 	HashKeyTable *key_table;
 
-	THash::THash();
-	THash::~THash();
-	void THash::ReBuildInit();
+	THash();
+	~THash();
+	void ReBuildInit();
 /************************************  Functions for build tracks.(iFlyBuild) ************************************************/
 	//此函数用于对于iFlyBuild的情况，从wav到Hash_Table.				//Finished.
-	void THash::BuildInit();
-	void THash::BuildUnInit();
+	void BuildInit();
+	void BuildUnInit();
 	//加歌名，更新歌曲数。											//Finished.
-	void THash::AddSongList(const char *filename);
+	void AddSongList(const char *filename);
 	//往Value的内存块里加数据，更新Key_table.						//Finished.
-	void THash::InsertHash(size_t f1, size_t f2_f1, size_t t, size_t id, size_t offset);
+	void InsertHash(size_t f1, size_t f2_f1, size_t t, size_t id, size_t offset);
 	//将Hash表往文件里刷（不是刷整个内存，这样会在iFlySelect里浪费内存空间）//Finished
-	void THash::Hash2File(const char* filename);
+	void Hash2File(const char* filename);
 
 /************************************  Functions for select tracks.(iFlySelect) ************************************************/
-	size_t* THash::GetHash(size_t f1, size_t f2_f1, size_t t);
-	void THash::File2Hash(const char* filename);
+	size_t* GetHash(size_t f1, size_t f2_f1, size_t t);
+	void File2Hash(const char* filename);
 	//Functions for vote and save the top voted id to QueryId.
-	void THash::VoteInit();
-	void THash::Vote(size_t f1, size_t f2_f1, size_t t, size_t offset);
-	size_t THash::VoteResult(size_t &offset);
+	void VoteInit();
+	void Vote(size_t f1, size_t f2_f1, size_t t, size_t offset);
+	size_t VoteResult(size_t &offset);
 };
 #endif // _HashFunc_h_

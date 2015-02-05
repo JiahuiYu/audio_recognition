@@ -1,8 +1,7 @@
 #include "wav.h"
-#include "stdafx.h"
 
 TWav::TWav(const char *filename){
-	fopen_s(&fp, filename, "rb");
+	fp = fopen(filename, "rb");
 	assert(fp != NULL);
 
 	fread(wav_info.riff_id, 1, 4, fp);

@@ -1,4 +1,5 @@
 #include "fingerprint.h"
+using namespace std;
 
 TExtractFeature::TExtractFeature(){
 	fftw_in = (fftw_complex*)fftw_malloc(sizeof(fftw_complex)* FRAME_SIZE);
@@ -57,9 +58,9 @@ int TExtractFeature::NotExtremum(int j, float Arr[]){
 void TExtractFeature::ExtractPair(const char *filename, THash &hash, int offset, float decay, int Id, int mode){
 	decay_factor = decay;
 	Wav2Spectrum(filename, offset);
-	//printf("w2s finish\n");
+    /* printf("w2s finish\n"); */
 	Spectrum2Feature();
-	//printf("s2f finish\n");
+    /* printf("s2f finish\n"); */
 	
 	if (mode == 0)
 		Feature2PairInsert(hash, Id);
@@ -174,7 +175,7 @@ int TExtractFeature::Feature2PairInsert(THash &hash, int id){
 	int pi, pj;
 	int count;
 	int flag;
-	int index = 0;
+	// [> int index = 0; <]
 	for (int i = 0; i<frame_num; i++)
 	for (int j = 0; j<FRAME_HEIGHT; j++){
 		flag = 1;
@@ -194,13 +195,12 @@ int TExtractFeature::Feature2PairInsert(THash &hash, int id){
 }
 
 int TExtractFeature::Feature2PairSearch(THash &hash){
-	//hash.VoteInit();
 	TBMP tb("pair.bmp", frame_num, FRAME_HEIGHT, 1);
 	tb.setcolor(0);
 	int pi, pj;
 	int count;
 	int flag;
-	int index = 0;
+	/* int index = 0; */
 	for (int i = 0; i<frame_num; i++)
 	for (int j = 0; j<FRAME_HEIGHT; j++){
 		flag = 1;
@@ -214,7 +214,7 @@ int TExtractFeature::Feature2PairSearch(THash &hash){
 			count++;
 			hash.Vote(j, pj-j+f2_f1_max, pi-i, i);
 			tb.drawline(i, j, pi, pj);
-			//if (count >= MAX_PAIR_PER_FEATURE) flag = 0;
+			/* if (count >= MAX_PAIR_PER_FEATURE) flag = 0; */
 		}
 	}
 	return 0;

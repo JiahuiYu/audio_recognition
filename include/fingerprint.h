@@ -6,7 +6,7 @@
 #include <fftw3.h>
 #include <assert.h>
 #include <wav.h>
-#include <Hash.h>
+#include <hash.h>
 #include <bmp.h>
 #include <stdint.h>
 

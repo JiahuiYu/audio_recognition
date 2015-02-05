@@ -4,7 +4,7 @@
 #include <iostream>
 #include <stdint.h>
 #include <assert.h>
-#include "stdafx.h"
+#include "stdio.h"
 //#define WAV_TEST
 using namespace std;
 

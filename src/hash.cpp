@@ -1,5 +1,4 @@
 #include "hash.h"
-#include "stdafx.h"
 
 //外部函数
 inline size_t HashTableOffset(size_t f1, size_t f2_f1, size_t t){
@@ -24,7 +23,7 @@ void THash::BuildInit(){
 	//初始化HashKey表
 	key_info = (HashKeyInfo*)malloc(sizeof(HashKeyInfo) * HashKeyNum);
 	for (int i = 0; i < HashKeyNum; i++){
-		key_info[i].next = nullptr;
+		key_info[i].next = NULL;
 		key_info[i].length = 0;
 	}
 }
@@ -45,7 +44,7 @@ void THash::BuildUnInit(){
 
 //加歌名，更新歌曲数。
 void THash::AddSongList(const char *filename){
-	strcpy_s(song_list[song_num], strlen(filename) + 1, filename);
+	strncpy(song_list[song_num], filename, strlen(filename) + 1);
 	song_num++;
 }
 
@@ -83,13 +82,13 @@ void THash::InsertHash(size_t f1, size_t f2_f1, size_t t, size_t id, size_t offs
 //将Hash表往文件里刷（不是刷整个内存，这样会在iFlySelect里浪费内存空间）
 void THash::Hash2File(const char* filename){
 	FILE *fp;
-	fopen_s(&fp, filename, "wb");
+	fp = fopen(filename, "wb");
 	if (fp == NULL){
 		printf("File open WRONG.\n");
 	}
 	//Write SongName
 	fwrite(&song_num, sizeof(size_t), 1, fp);
-	printf("共%d首歌\n", song_num);
+	printf("共%zu首歌\n", song_num);
 	for (size_t i = 0; i<song_num; i++)
 		fwrite(song_list[i], sizeof(char), strlen(song_list[i]) + 1, fp);
 	//Write hash table.
@@ -114,10 +113,10 @@ void THash::Hash2File(const char* filename){
 
 void THash::File2Hash(const char *filename){
 	FILE *fp;
-	fopen_s(&fp, filename, "rb");
+	fp = fopen(filename, "rb");
 	char *chp;
 	fread(&song_num, sizeof(size_t), 1, fp);
-	printf("共%d首歌\n", song_num);
+	printf("Totally %zu songs.\n", song_num);
 	for (size_t i = 0; i<song_num; i++){
 		chp = song_list[i];
 		do{
@@ -153,9 +152,12 @@ void THash::Vote(size_t f1, size_t f2_f1, size_t t, size_t offset){
 	size_t length = pKey->length;
 	while (length){
 		length--;
-		size_t offset_value = (*(pKey->start + length) << ID_BITS) >> ID_BITS;
+		/* size_t offset_value = (*(pKey->start + length) << ID_BITS) >> ID_BITS; */
+		size_t offset_value = (*(pKey->start + length)) & 0x00003FFF ; // 0x00003FFF means the first 14 bits in total 32 bits.
+        /* printf("Here5,%zu, %zu\n",*(pKey->start + length), offset_value); */
 		if (offset_value < offset)
 			continue;	//	为失效投票，这种情况的投票结果为错的
+        /* printf("Here6,%zu, %zu\n",(*(pKey->start + length)) >> OFFSET_BITS, offset_value - offset); */
 		vote_table[(*(pKey->start + length)) >> OFFSET_BITS][offset_value - offset]++;
 	}
 	return;
@@ -178,12 +180,12 @@ size_t THash::VoteResult(size_t &offset){
 }
 
 THash::THash(){
-	pValueStart = nullptr;
-	pValueEnd = nullptr;
-	vote_table = nullptr;
+	pValueStart = NULL;
+	pValueEnd = NULL;
+	vote_table = NULL;
 	data_num = 0;
 	song_num = 0;
-	key_info = nullptr;
+	key_info = NULL;
 	song_list = (char **)malloc(MAX_SONG_NUM*sizeof(char*));
 	for (int i=0; i<MAX_SONG_NUM; i++)
 		song_list[i] = (char *)malloc(MAX_SONG_LEN*sizeof(char));
