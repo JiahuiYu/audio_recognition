@@ -1,3 +1,19 @@
+/**-------------------------/// fingerprint audio \\\---------------------------
+ *
+ * <b>fingerprint audio</b>
+ * @version : 
+ * @since : 2015  2月 07
+ *
+ * @description :
+ *     To extract features of songs.
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511  gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ fingerprint audio ///---------------------------*/
+
 #ifndef FINGERPRINT_H
 #define FINGERPRINT_H
 

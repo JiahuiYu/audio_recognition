@@ -1,3 +1,19 @@
+/**-------------------------/// bmp \\\---------------------------
+ *
+ * <b>bmp pics head</b>
+ * @version : 1.0
+ * @since : 2015  2ÔÂ 07
+ *
+ * @description :
+ *     To produce bmp pictures.
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511 ^_^ gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ bmp ///---------------------------*/
+
 #include "bmp.h"
 
 TBMP::TBMP(const char *filename, int w, int h, int mode){

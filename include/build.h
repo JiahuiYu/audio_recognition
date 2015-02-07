@@ -1,3 +1,19 @@
+/**-------------------------/// build songs library \\\---------------------------
+ *
+ * <b>build songs library</b>
+ * @version : 
+ * @since : 2015  2月 07
+ *
+ * @description :
+ *     
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511  gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ build songs library ///---------------------------*/
+
 #ifndef _IFLY_RES_BUILD_H_
 #define _IFLY_RES_BUILD_H_
 

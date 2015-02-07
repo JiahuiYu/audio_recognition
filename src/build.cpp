@@ -1,3 +1,19 @@
+/**-------------------------/// build songs library \\\---------------------------
+ *
+ * <b>build songs library</b>
+ * @version : 
+ * @since : 2015  2月 07
+ *
+ * @description :
+ *     To build a songs library in the dir of ./samples
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511  gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ build songs library ///---------------------------*/
+
 #include "hash.h"
 #include "fingerprint.h"
 #include <fcntl.h>             // 提供open()函数
@@ -63,7 +79,7 @@ int
 main( int argc, char **argv )
 {
     Initialize();
-    ProcessBuildRes("/home/jiah/WS/git/AudioRecognition/bin/samples/", "./database");
+    ProcessBuildRes("./samples/", "./database");
     unInitialize();
     return 0;
 }

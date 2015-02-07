@@ -1,3 +1,19 @@
+/**-------------------------/// wav format analyse \\\---------------------------
+ *
+ * <b>wav format analyse</b>
+ * @version : 
+ * @since : 2015  2月 07
+ *
+ * @description :
+ *     
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511  gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ wav format analyse ///---------------------------*/
+
 #include "wav.h"
 
 TWav::TWav(const char *filename){

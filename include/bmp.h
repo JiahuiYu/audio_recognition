@@ -1,3 +1,19 @@
+/**-------------------------/// bmp include \\\---------------------------
+ *
+ * <b>bmp include</b>
+ * @version : 
+ * @since : 2015  2月 07
+ *
+ * @description :
+ *     
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511  gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ bmp include ///---------------------------*/
+
 #ifndef BMP_H
 #define BMP_H
 

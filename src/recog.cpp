@@ -1,3 +1,19 @@
+/**-------------------------/// recognition of songs \\\---------------------------
+ *
+ * <b>recognition of songs</b>
+ * @version : 
+ * @since : 2015  2月 07
+ *
+ * @description :
+ *     
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511  gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ recognition of songs ///---------------------------*/
+
 #include "hash.h"
 #include "fingerprint.h"
 

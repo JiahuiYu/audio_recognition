@@ -1,3 +1,19 @@
+/**-------------------------/// hash functions \\\---------------------------
+ *
+ * <b>hash functions</b>
+ * @version : 
+ * @since : 2015  2月 07
+ *
+ * @description :
+ *     
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511  gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ hash functions ///---------------------------*/
+
 #include "hash.h"
 
 //外部函数

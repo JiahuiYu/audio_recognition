@@ -1,3 +1,19 @@
+/**-------------------------/// fingerprint / feature extract \\\---------------------------
+ *
+ * <b>fingerprint feature extract</b>
+ * @version : 
+ * @since : 2015  2月 07
+ *
+ * @description :
+ *     To extract the features of songs.
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511  gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ fingerprint / feature extract ///---------------------------*/
+
 #include "fingerprint.h"
 using namespace std;
 

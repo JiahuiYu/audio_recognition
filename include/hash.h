@@ -1,3 +1,19 @@
+/**-------------------------/// hash structures \\\---------------------------
+ *
+ * <b>hash strctures and functions</b>
+ * @version :
+ * @since : 2015  2月 07
+ *
+ * @description :
+ *     
+ * @usage :
+ *
+ * @author : 'Jiahui Yu' | yjh199511  gmail.com
+ * @copyright 
+ * @TODO :
+ *
+ *--------------------------\\\ hash structures ///---------------------------*/
+
 #ifndef _HashFunc_h_
 #define _HashFunc_h_
 
