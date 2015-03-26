@@ -45,9 +45,10 @@ int ProcessSelelct(const char *szAudioPath, std::string &szResultString){
 	fingerprint.UnInit();
 	size_t offset;
 	size_t result = myhash.VoteResult(offset);
-	printf("The song is %s, the offset is %f s.\n", myhash.song_list[result], (float)(offset*(float)FRAME_HOP / 8000.0));
+	printf("识别结果:\n");
+	printf("歌名: %30s, 正在播放:第 %10f 秒.\n", myhash.song_list[result], (float)(offset*(float)FRAME_HOP / 8000.0));
+    printf("------------\n");
 	szResultString = myhash.song_list[result];
-	
 	return 0;
 }
 
@@ -64,8 +65,9 @@ main( int argc, char **argv )
         printf("Wrong Usage, please use './recog filename'\n");
         return 1;
     }
-    Initialize("./database");
-    printf("Initialize done.\n");
+    //ADD your database path here!!!
+    Initialize("YOUR_DATABASE_PATH");
+    /* printf("读文件，重建数据库. done.\n"); */
     /* printf("Audio path is :%s\n",argv[1]); */
     ProcessSelelct(argv[1],resultString);
     unInitialize();

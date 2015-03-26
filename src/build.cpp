@@ -50,13 +50,13 @@ int ProcessBuildRes(const char *szResDir, const char *szResPath){
         if (!(S_IFDIR &statbuf.st_mode))    // 判断下一级成员不是目录
         {
             strcpy(FileName, entry->d_name);
-            printf("%d: %s ",index , FileName);  // 输出属性不是目录的成员
             myhash.AddSongList(FileName); 
             char FilePath[80] = "";
             strcat(FilePath, szResDir);
             strcat(FilePath, FileName);
-            printf("%s\n",FilePath);  // 输出属性不是目录的成员
+            /* printf("%s\n",FilePath);  // 输出属性不是目录的成员  */
             fingerprint.ExtractPair(FilePath, myhash, 0, (float)0.98, index, 0); 
+            printf("%d: %s 建库成功.\n",index , FileName);  // 输出属性不是目录的成员
             fingerprint.UnInit(); 
             index ++;
         }
@@ -79,7 +79,8 @@ int
 main( int argc, char **argv )
 {
     Initialize();
-    ProcessBuildRes("./samples/", "./database");
+    //ADD your own paths here!!!
+    ProcessBuildRes("YOUT_PATH_OF_MUSIC_FILES", "YOUR_PATH_OF_DATABASE_FILE");
     unInitialize();
     return 0;
 }

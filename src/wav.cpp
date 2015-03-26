@@ -19,7 +19,6 @@
 TWav::TWav(const char *filename){
 	fp = fopen(filename, "rb");
 	assert(fp != NULL);
-
 	fread(wav_info.riff_id, 1, 4, fp);
 	wav_info.riff_id[4] = '\0';
 	fread(&wav_info.size0, 4, 1, fp);

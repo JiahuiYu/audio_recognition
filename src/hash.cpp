@@ -132,7 +132,8 @@ void THash::File2Hash(const char *filename){
 	fp = fopen(filename, "rb");
 	char *chp;
 	fread(&song_num, sizeof(size_t), 1, fp);
-	printf("Totally %zu songs.\n", song_num);
+    printf("------------\n");
+	printf("数据库中共有 %zu 首歌的特征数据.\n", song_num);
 	for (size_t i = 0; i<song_num; i++){
 		chp = song_list[i];
 		do{
