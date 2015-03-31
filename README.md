@@ -50,3 +50,5 @@ DONE:
    - Transfer the codes from windows to linux.
    - Solve the BaiduMusic download tools to update new songs automatically.
 
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jh-yu/audiorecognition/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
