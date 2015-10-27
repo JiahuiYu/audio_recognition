@@ -1,7 +1,7 @@
 Music/Audio Recognition Application written in C++
 ===============================================
 
-## Youtube Available Now! Click [Here](https://www.youtube.com/watch?v=tvoyZkcDKiw)
+### Youtube Available Now! Click [Here](https://www.youtube.com/watch?v=tvoyZkcDKiw)
 
 * I start this project to attend a COMPETITION. My partner and I finshed this project on Windows8 and won the *First Prize* delivered by [National Engineering Laboratory for Speech and Language Informatinon Processing](http://nelslip.ustc.edu.cn/html/yunews/detail_2014_05/30/191.shtml).
 * Now it is successfully moved to LINUX (Ubuntu/Debian).
@@ -13,7 +13,7 @@ Features:
 -----
 
     * Robust Audio Recognition
-    * High Accuracy: 98% Accuracycy of 5 seconds song cut in 100 songs list.
+    * High Accuracy: 100% Accuracycy of 500 6-second songs cuts in 100 songs list.
     * High efficiency: recognize in less than 0.1 second per song.
     * Memory reduction: 4G is enough for 10000 songs.
     * Data Structure: support 2,500,000 songs and each song less than 7 minutes.
