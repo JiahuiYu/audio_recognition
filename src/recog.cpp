@@ -60,16 +60,16 @@ int
 main( int argc, char **argv )
 {
     std::string resultString;
-    if (argc != 2 )
+    if (argc != 3 )
     {
-        printf("Wrong Usage, please use './recog filename'\n");
+        printf("Wrong Usage, please use './recog database_file filename'\n");
         return 1;
     }
     //ADD your database path here!!!
-    Initialize("YOUR_DATABASE_PATH");
+    Initialize(argv[1]);
     /* printf("读文件，重建数据库. done.\n"); */
     /* printf("Audio path is :%s\n",argv[1]); */
-    ProcessSelelct(argv[1],resultString);
+    ProcessSelelct(argv[2],resultString);
     unInitialize();
     return 0;
 }
