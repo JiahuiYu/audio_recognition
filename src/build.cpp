@@ -67,7 +67,7 @@ main( int argc, char **argv )
 {
     Initialize();
     //ADD your own paths here!!!
-    ProcessBuildRes("YOUT_PATH_OF_MUSIC_FILES", "YOUR_PATH_OF_DATABASE_FILE");
+    ProcessBuildRes(argv[1], argv[2]);
     unInitialize();
     return 0;
 }
