@@ -1,0 +1,40 @@
+#!/bin/bash
+
+axel http://home.ustc.edu.cn/~kaiki/dataset/007.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Fly-Me-To-The-Moon.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Halo.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Heart-And-Soul.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Historia-De-Un-Amor.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Just-Dance.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Just-One-Last-Dance.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Loving-You.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Moves-Like-Jagger.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Never-Say-Goodbye.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Never-Say-Never.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Only-Time.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Only-You.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Part-Of-Me.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Poker-Face.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Pretty-Boy.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Price-Tag.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Rolling-In-The-Deep.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Safe---Sound-.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Satin-Doll.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Seven-Years.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/She-Is-My-Sin.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Solitude.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Stronger--What-Doesn-t-Kill-You-.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Summer.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/That-Place-In-Your-Heart.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/The-Promise.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Trespassing.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Trouble-Is-A-Friend.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Unforgivable-Sinner.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Vertigo.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Wake-Up-Call.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Walking-In-The-Sun.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/We-Will-Rock-You.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/What-A-Wonderful-World.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Whataya-Want-From-Me.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Work-Out.wav &
+axel http://home.ustc.edu.cn/~kaiki/dataset/Yellow.wav

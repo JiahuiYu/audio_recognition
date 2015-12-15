@@ -211,8 +211,6 @@ int TExtractFeature::Feature2PairInsert(THash &hash, int id){
 }
 
 int TExtractFeature::Feature2PairSearch(THash &hash){
-	TBMP tb("pair.bmp", frame_num, FRAME_HEIGHT, 1);
-	tb.setcolor(0);
 	int pi, pj;
 	int count;
 	int flag;
@@ -229,7 +227,6 @@ int TExtractFeature::Feature2PairSearch(THash &hash){
 				continue;
 			count++;
 			hash.Vote(j, pj-j+f2_f1_max, pi-i, i);
-			tb.drawline(i, j, pi, pj);
 			/* if (count >= MAX_PAIR_PER_FEATURE) flag = 0; */
 		}
 	}

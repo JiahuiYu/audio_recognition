@@ -23,7 +23,6 @@
 #include <assert.h>
 #include <wav.h>
 #include <hash.h>
-#include <bmp.h>
 #include <stdint.h>
 
 #define FRAME_SIZE 512
