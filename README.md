@@ -1,4 +1,4 @@
-Music/Audio Recognition Application written in C++
+Music/Audio Fingerprinting and Recognition Application in C++
 ===============================================
 
 - Youtube demo [Here](https://www.youtube.com/watch?v=tvoyZkcDKiw).
@@ -7,41 +7,34 @@ Music/Audio Recognition Application written in C++
 Features:
 -----
 
-- Robust Audio Recognition
-- High Accuracy: 100% Accuracycy of 500 6-second songs cuts in 100 songs list.
-- High efficiency: recognize in less than 0.1 second per song.
-- Memory reduction: 4G is enough for 10000 songs.
-- Data Structure: support 2,500,000 songs and each song less than 7 minutes.
-- More feature: return the TIME POINT of the cut song in original song.
+- audio Fingerprinting and Recognition
+- accuracy: 100% Accuracy of 500 6-second songs cuts in 100 songs list
+- efficiency: recognize in less than 0.1 second per song cut
+- memory: 10000 songs database in 4G memory
+- data Structure: support 2,500,000 songs and each song should be less than 7 minutes
+- time point recognition: return the TIME POINT of the cut song in original song
 
 
 Dependencies:
 -----
 
 - fftw3:
-    If under Debian/Ubuntu, run `apt-get install libfftw3-dev`.
+    Under Debian/Ubuntu, please run `apt-get install libfftw3-dev`.
 
 Compile & Run:
 -----
 
-- extract songs to ./bin/ dir.
+- extract songs to ./bin/ dir
 - `make` to produce two excutive files in ./bin/ 
-- The songs should be .wav format.
-- The songs should be contained in ./bin/samples/ 
-- You may download the songs.
+- the songs should be .wav format
+- the songs should be contained in ./bin/samples/ 
+- you may download the example songs
     link: http://pan.baidu.com/s/1ntsoIlr
     password: wgi7 
 - run `cd bin`, `./build` and it'll produce a file called `database`
-- run `./recog ${filename}` to recog the songs that in samples list.
+- run `./recog ${filename}` to recog the songs that in samples list
 
-TODO:
+Limitations:
 -----
-   - The code is too dirty written by a first-year c++ programmer(me).. :(
-   - More Documents and comments about the codes.
-
-DONE:
------
-
-   - All the codes in Windows.
-   - Transfer the codes from windows to linux.
-   - Solve the BaiduMusic download tools to update new songs automatically.
+   - bad code style
+   - lack of documents
